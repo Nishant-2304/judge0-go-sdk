@@ -34,7 +34,7 @@ func (c *Client) GetLanguages() ([]Language, error) {
 }
 
 // returns the Judge0 language ID for the given language name.
-func (c *Client) GetLanguageByID(name string) (int, error) {
+func (c *Client) GetLanguageIDByName(name string) (int, error) {
 	languages, err := c.GetLanguages()
 	if err != nil {
 		return 0, fmt.Errorf("failed to get languages for lookup: %w", err)
